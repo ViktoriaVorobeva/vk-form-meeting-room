@@ -1,0 +1,267 @@
+/* Общие стили. Каркас
+   ========================================================================== */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content-box-component {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  max-width: 1200px;
+  min-width: 1000px;
+  margin: 0 auto;
+
+  color: #353535;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+
+  background-color: #f0f0ea;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.notice {
+  border: 2px solid #000000;
+  background-color: #c2b8a8;
+  width: 880px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.notice h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.ad-form p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.ad-form__element {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-form__element:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.ad-form__element label {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.ad-form__element select, 
+.ad-form__element input,
+.ad-form__element textarea {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #d2cabe;
+} 
+
+.ad-form__element select:hover,
+.ad-form__element input:hover,
+.ad-form__element textarea:hover {
+  opacity: 0.7;
+}
+
+.ad-form__element select:focus,
+.ad-form__element input:focus,
+.ad-form__element textarea:focus,
+.ad-form__element textarea:not(:placeholder-shown) {
+  background-color: #8e7d63;
+  outline: none;
+}
+
+.ad-form__element textarea {
+  height: 100px;
+}
+
+.ad-form__element-box {
+  position: relative;
+}
+
+.ad-form__element-box:first-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.ad-form__element-box select {
+  width: 40%;
+}
+
+.ad-form__element--submit {
+  flex-direction: row;
+}
+
+.ad-form__reset {
+  margin-left: auto;
+}
+
+.button {
+  width: 48%;
+  background-color: #d2cabe;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:focus,
+.button:active {
+  background-color: #8e7d63;
+}
+
+.add-form__text-error {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #ff5635;
+}
+
+
+/**
+ * Сообщения об успешном и неуспешном создании объявления
+ */
+
+.success,
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  padding-top: 300px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.success__message,
+.error__message {
+  position: relative;
+
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.error__button {
+  padding: 10px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+
+  color: white;
+  border: 4px solid #ff5635;
+  background-color: #ff5635;
+  border-radius: 8px;
+}
+
+.success__button {
+  padding: 10px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+
+  color: white;
+  border: 4px solid #8e7d63;
+  background-color: #8e7d63;
+  border-radius: 8px;
+}
+
+.error__button:hover,
+.error__button:focus,
+.success__button:hover,
+.success__button:focus {
+  opacity: 0.8;
+}
+
+.error__button:focus,
+.success__button:focus {
+  outline: none;
+}
+
+.error__button:active,
+.success__button:active {
+  outline: none;
+  opacity: 0.6;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

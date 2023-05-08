@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>booking meeting room</title>
+</head>
+
+<body>
+
+  <main>
+    <h1 class="visually-hidden">Форма бронирования переговорной</h1>
+
+    <!-- Форма бронирования -->
+    <section class="notice">
+      <h2>Заполните форму</h2>
+      <form class="ad-form" method="post" enctype="multipart/form-data" autocomplete="off">
+        <p>Заполните все обязательные поля формы, чтобы забронировать переговорную в максимально
+          удобное для Вас время.</p>
+
+        <!-- Выбор башни -->
+        <fieldset class="ad-form__element">
+          <label for="building-type">Башня:</label>
+          <select name="building-type" id="building-type">
+            <option value="A" selected>Башня А</option>
+            <option value="B">Башня Б</option>
+          </select>
+        </fieldset>
+
+        <!-- Выбор этажа -->
+        <fieldset class="ad-form__element">
+          <label for="floor">Этаж:</label>
+          <select name="floor" id="floor">
+            <option value="3-floor" selected>3</option>
+            <option value="4-floor">4</option>
+            <option value="5-floor">5</option>
+            <option value="6-floor">6</option>
+            <option value="7-floor">7</option>
+            <option value="8-floor">8</option>
+            <option value="9-floor">9</option>
+            <option value="10-floor">10</option>
+            <option value="11-floor">11</option>
+            <option value="12-floor">12</option>
+            <option value="13-floor">13</option>
+            <option value="14-floor">14</option>
+            <option value="15-floor">15</option>
+            <option value="16-floor">16</option>
+            <option value="17-floor">17</option>
+            <option value="18-floor">18</option>
+            <option value="19-floor">19</option>
+            <option value="20-floor">20</option>
+            <option value="21-floor">21</option>
+            <option value="22-floor">22</option>
+            <option value="23-floor">23</option>
+            <option value="24-floor">24</option>
+            <option value="25-floor">25</option>
+            <option value="26-floor">26</option>
+            <option value="27-floor">27</option>
+          </select>
+        </fieldset>
+
+        <!-- Выбор номера переговорки -->
+        <fieldset class="ad-form__element">
+          <label for="meeting-room">Номер переговорной:</label>
+          <select name="meeting-room" id="meeting-room">
+            <option value="1-meeting-room" selected>1</option>
+            <option value="2-meeting-room">2</option>
+            <option value="3-meeting-room">3</option>
+            <option value="4-meeting-room">4</option>
+            <option value="5-meeting-room">5</option>
+            <option value="6-meeting-room">6</option>
+            <option value="7-meeting-room">7</option>
+            <option value="8-meeting-room">8</option>
+            <option value="9-meeting-room">9</option>
+            <option value="10-meeting-room">10</option>
+          </select>
+        </fieldset>
+
+        <!-- Выбор даты и интервала времени -->
+        <fieldset class="ad-form__element">
+          <div class="ad-form__element-box">
+            <label for="date">Дата:</label>
+            <input type="date" name="date" id="date" required data-pristine-required-message="Обязательное поле">
+          </div>
+          <div class="ad-form__element-box">
+            <label for="timein">Интервал времени:</label>
+            <select id="timein" name="timein">
+              <option value="12:00" selected>12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+            </select>
+            -
+            <select id="timeout" name="timeout">
+              <option value="13:00" selected>13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Поле комментария -->
+        <fieldset class="ad-form__element">
+          <label for="comment">Комментарий (не обязательно)</label>
+          <textarea id="comment" name="comment" placeholder="Здесь можно рассказать о своих пожеланиях"></textarea>
+        </fieldset>
+
+        <!-- Кнопки управления формой -->
+        <fieldset class="ad-form__element ad-form__element--submit">
+          <button class="ad-form__submit button" type="submit">Опубликовать</button>
+          <button class="ad-form__reset button" type="reset">Очистить</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer container">
+  </footer>
+
+  <!-- Сообщение об успешной отправке формы -->
+  <template id="success">
+    <div class="success">
+      <p class="success__message">Ваша форма<br>успешно отправлена!</p>
+      <button type="button" class="success__button">Отлично</button>
+    </div>
+  </template>
+
+  <!-- Сообщение об ошибке отправки формы -->
+  <!-- <template id="error">
+    <div class="error">
+      <p class="error__message">Ошибка отправки формы</p>
+      <button type="button" class="error__button">Попробовать снова</button>
+    </div>
+  </template> -->
+  <script src="vendor/pristine/pristine.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
